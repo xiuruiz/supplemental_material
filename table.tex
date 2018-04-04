@@ -1,0 +1,25 @@
+\section*{Table \arabic{table_counter}}
+\hypertarget{sec:table}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Output file: table.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent To make Table \arabic{table_counter},
+change into the {\em data\_pub/coulomb} directory and extract the
+necessary data for the first row by typing
+\begin{verbatim}
+cd ~/projects/nucnet-tools-code/data_pub/coulomb
+
+../../examples/analysis/print_properties my_output5.xml time t9 rho > props.txt
+
+../../examples/analysis/print_mass_fractions_in_zones my_output5.xml he4 ni56 > x.txt
+\end{verbatim}
+Find the row in {\em props.txt} corresponding to the time $\sim 100$ seconds.
+Compute the photon-to-nucleo ratio $\phi$ as $\phi = 0.34 T_9^3 / \rho_5$,
+where $\rho_5 = \rho / 10^5$ g/cc.   The $^4$He and $^{56}$Ni mass fractions
+are in the corresponding row of the file {\em x.txt}.  The Coulomb energy
+per nucleon can be retrieved from the file {\em ec\_time5.txt} computed
+\hyperlink{sec:ec_time5}{previously}.  Repeat for the other calculations.
+
+\addtocounter{table_counter}{1}

@@ -1,0 +1,28 @@
+\section*{Figure \arabic{counter}}
+\hypertarget{sec:yz_rad_stable}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Output file: yz_rad_stable.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent To make Figure \arabic{counter}, it is first necessary to
+compute the radioactive fraction of each isobaric abundance.  To
+do this, checkout and compile the {\em nuclear\_decay} project, as
+described at
+\url{http://sourceforge.net/p/nucnet-projects/wiki/nuclear_decay/}.
+Once that is done, compute the isobaric abundances.  To do so, select
+the timestep between time $t = 0.19$ and $t = 0.2$ seconds; thus, type
+(all one one line)
+\begin{verbatim}
+./rad_vs_nucleon_number ../nucnet-tools-code/data_pub/coulomb/my_output5.xml a "[optional_properties/property[@name='time'] > 0.19 and optional_properties/property[@name = 'time'] < 0.2]" > ../nucnet-tools-code/data_pub/coulomb/yz_rad_stable.txt
+\end{verbatim}
+The output file {\em yz\_rad\_stable.txt} gives the isobaric abundances 
+for the indicated number of mass numbers (first line) and
+at the indicated time, temperature, density (second line).  The subsequent
+lines give the mass number $A$, the isobaric abundance, and the fraction
+of the abundance that is radioactive.  Graph column 2 versus column 1.
+Distinguish between the cases where the radioactive abundance fraction is
+less than or greater than 1/2.
+
+\addtocounter{counter}{1}
+

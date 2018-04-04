@@ -1,0 +1,74 @@
+\section*{Nucleosynthesis Calculations} \hypertarget{sec:single_zone}{}
+
+\hspace{4ex}To make Figure \arabic{counter},
+you first need to run the nucleosynthesis calculation.
+First follow the instructions at
+\url{http://sourceforge.net/p/nucnet-projects/wiki/nuclear_mass/} to install
+and compile the relevant codes.\footnote{Throughout these instructions, we will
+assume you have installed the {\em projects/} directory off your home
+directory.}
+
+Once the {\em nuclear\_mass} project is properly installed and compiled,
+you are ready to run the the nucleosynthesis calculations.  To do so,
+change into the nucnet-tools-code directory that downloaded automatically
+when you compiled the {\em nuclear\_mass} project and compile the single zone
+network code:
+\begin{verbatim}
+cd ~/projects/nucnet-tools-code/examples/network
+
+make all_network
+\end{verbatim}
+Next, download the data for the calculation by typing:
+\begin{verbatim}
+make data
+\end{verbatim}
+This creates a directory {\em ../../data\_pub}.  For convenience, create
+a subdirectory under {\em ../../data\_pub} for your output called
+{\em coulomb} by typing
+\begin{verbatim}
+cd ../../data_pub
+
+mkdir coulomb
+\end{verbatim}
+Now edit
+the file {\em zone.xml} in {\em data\_pub} until it reads
+
+\begin{verbatim}
+  <zone_data>
+    <zone>
+      <optional_properties>
+        <property name="tend">1.e10</property>
+        <property name="tau">0.2</property>
+        <property name="munuekT">-inf</property>
+        <property name="t9_0">5.</property>
+        <property name="steps">5</property>
+        <property name="rho_0">1.e7</property>
+      </optional_properties>
+      <mass_fractions>
+        <nuclide name="si28">
+          <z>14</z>
+          <a>28</a>
+          <x>1</x>
+        </nuclide>
+      </mass_fractions>
+    </zone>
+  </zone_data>
+\end{verbatim}
+
+Once this is done, you are ready to run the calculation.  Return to
+{\em $\sim$/projects/nucnet-tools-code/examples/network}
+by typing
+\begin{verbatim}
+cd ../examples/network
+\end{verbatim}
+and type (all on one line)
+\begin{verbatim}
+./run_single_zone ../../data_pub/my_net.xml ../../data_pub/zone.xml ../../data_pub/coulomb/my_output5.xml "[z <= 35]"
+\end{verbatim}
+This calculation uses the network data in {\em ../../data\_pub/my\_net.xml}
+and the run data in {\em ../../data\_pub/zone.xml} and places the output
+in {\em ../../data\_pub/coulomb/my\_output5.xml}.  The
+\begin{verbatim}"[z <= 35]"\end{verbatim} selects a network that only includes
+species up to $Z = 35$, which is certainly adequate for our purposes.
+(Typical execution time for an x86\_64 type processor: $\sim$50 minutes.)
+

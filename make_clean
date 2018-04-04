@@ -1,0 +1,11 @@
+rm *.4ct
+rm *.4tc
+rm *.aux
+rm *.css
+rm *.dvi
+rm *.idv
+rm *.lg
+rm *.log
+rm *.out
+rm *.tmp
+rm *.xref

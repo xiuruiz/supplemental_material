@@ -1,0 +1,44 @@
+\section*{Figure \arabic{counter}}
+\hypertarget{sec:mass_diff}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Output file: mass_diff.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent To make Figure \arabic{counter}, it is necessary to retrieve the
+relevant nuclear data.  First, create the {\em libnucnet} example codes by
+typing
+\begin{verbatim}
+cd ~/projects/nucnet-tools-code/build
+
+make -f Makefile.libnucnet all_libnucnet
+\end{verbatim}
+Next extract the data by typing
+\begin{verbatim}
+cd ../libnucnet
+
+./print_nuclides ../data_pub/my_net.xml "[(z >= 12 and z <= 30) and ((a = 2 * z or a = 2 * z + 4) and z mod 2 = 0)]" > ../data_pub/coulomb/masses.txt
+\end{verbatim}
+The XPath expression selects out only alpha nuclei and their potential
+daughters.  Graph the mass excess (column 4 of {\em masses.txt})
+difference between $(Z,A)$ and $(Z-2,A)$ versus atomic number of the $(Z,A)$
+parent (column 2).
+
+Now compute the terms in the nuclear mass formula for the species by typing
+\begin{verbatim}
+cd ~/projects/nuclear_mass
+
+./mass_terms ../nucnet-tools-code/data_pub/my_net.xml "[((z >= 12 and z <= 30) and ((a = 2 * z or a = 2 * z + 4) and z mod 2 = 0)) or a = 1]" > ../nucnet-tools-code/data_pub/coulomb/energies.txt
+\end{verbatim}
+The columns of the output file {\em energies.txt} are
+1 (species name), 2 (atomic number), 3 (mass number), 4 (volume
+energy), 5 (surface energy), 6 (Coulomb energy), 7 (pairing energy), and
+8 (shell energy).  Subtract the relevant Coulomb energy from the mass excess
+from {\em masses.txt} and plot the difference between $(Z,A)$ and $(Z-2,A)$
+versus atomic number of the $(Z,A)$ parent.
+
+For more details on running {\em libnucnet} example codes, see the blog post
+\url{http://sourceforge.net/u/mbradle/blog/2012/07/running-libnucnet-examples/}.
+
+\addtocounter{counter}{1}
+

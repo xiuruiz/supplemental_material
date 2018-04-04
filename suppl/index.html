@@ -1,0 +1,478 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<!-- html,1,next,fn-in --> 
+<meta name="src" content="index.tex"> 
+<link rel="stylesheet" type="text/css" href="index.css"> 
+</head><body 
+>
+<!--l. 14--><p class="noindent" >This is supplemental material to the paper <a 
+href="http://www.sciencedirect.com/science/article/pii/S1387647316300057" >The Secondary Supernova Machine:
+Gravitational Compression, Stored Coulomb Energy, and SNII Displays</a> by Donald D.
+Clayton and Bradley S. Meyer.
+   <div class="tableofcontents">
+   <span class="likesectionToc" ><a 
+href="#x1-1000" id="QQ2-1-1">Introduction</a></span>
+<br />   <span class="likesectionToc" ><a 
+href="#x1-2000" id="QQ2-1-2">Computer Requirements</a></span>
+<br />   <span class="likesectionToc" ><a 
+href="#x1-3000" id="QQ2-1-3">Getting Help</a></span>
+<br />   <span class="likesectionToc" ><a 
+href="#x1-4000" id="QQ2-1-4">Nucleosynthesis Calculations</a></span>
+<br />   <span class="likesectionToc" ><a 
+href="#x1-5000" id="QQ2-1-5">Figure 1</a></span>
+<br />   <span class="likesectionToc" ><a 
+href="#x1-6000" id="QQ2-1-6">Figure 2</a></span>
+<br />   <span class="likesectionToc" ><a 
+href="#x1-7000" id="QQ2-1-7">Figure 3</a></span>
+<br />   <span class="likesectionToc" ><a 
+href="#x1-8000" id="QQ2-1-8">Figure 4</a></span>
+<br />   <span class="likesectionToc" ><a 
+href="#x1-9000" id="QQ2-1-9">Figure 5</a></span>
+<br />   <span class="likesectionToc" ><a 
+href="#x1-10000" id="QQ2-1-10">Figure 6</a></span>
+<br />   <span class="likesectionToc" ><a 
+href="#x1-11000" id="QQ2-1-11">Figure 7</a></span>
+<br />   <span class="likesectionToc" ><a 
+href="#x1-12000" id="QQ2-1-12">Table 1</a></span>
+   </div>
+   <h3 class="likesectionHead"><a 
+ id="x1-1000"></a>Introduction</h3>
+<!--l. 3--><p class="noindent" >This supplementary material explains in some detail how to create the figures in the
+parent paper. We describe input files you need to edit and commands that you type
+to make the data for the figures.
+<!--l. 7--><p class="indent" >   &#x00A0;     In what follows, you will need to type certain lines directly into your
+computer. For example,
+                                                                  
+
+                                                                  
+   <div class="verbatim" id="verbatim-1">
+./command&#x00A0;input1&#x00A0;input2
+</div>
+<!--l. 11--><p class="nopar" > means that you should enter <span 
+class="cmbx-10">./command input1 input2 </span>into your computer. We
+in fact recommend that you simply copy and paste such text (for example, try
+triple-clicking the line to select it) into the appropriate directory.
+   <h3 class="likesectionHead"><a 
+ id="x1-2000"></a>Computer Requirements</h3>
+<!--l. 3--><p class="noindent" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;               The calculations needed to create the figures can be run on most
+computers. It is necessary to install the appropriate libraries, as described at
+<a 
+href="http://sourceforge.net/p/nucnet-projects/wiki/libraries/" class="url" ><span 
+class="cmtt-10">http://sourceforge.net/p/nucnet-projects/wiki/libraries/</span></a>. Since the input
+and output XML data are parsed in with a DOM parser, it is advisable to have at
+least 2 Gb of RAM.
+<!--l. 1--><p class="noindent" >
+   <h3 class="likesectionHead"><a 
+ id="x1-3000"></a>Getting Help</h3>
+<!--l. 3--><p class="noindent" >If you find you need help in installing or compiling the codes, or running the
+calculations, it is best to create a post on the Nucnet Projects Discussion Board at
+<a 
+href="http://sourceforge.net/p/nucnet-projects/discussion/" class="url" ><span 
+class="cmtt-10">http://sourceforge.net/p/nucnet-projects/discussion/</span></a>. If you believe you
+have found a bug in one or more of the codes, please report it as a NucNet Projects
+Ticket at <a 
+href="http://sourceforge.net/p/nucnet-projects/tickets/" class="url" ><span 
+class="cmtt-10">http://sourceforge.net/p/nucnet-projects/tickets/</span></a>.
+<!--l. 1--><p class="noindent" >
+   <h3 class="likesectionHead"><a 
+ id="x1-4000"></a>Nucleosynthesis Calculations</h3>
+<!--l. 1--><p class="noindent" ><a 
+ id="sec:single_zone"></a>
+<!--l. 3--><p class="indent" >   &#x00A0;     To make Figure 1, you first need to run the
+nucleosynthesis calculation. First follow the instructions at
+<a 
+href="http://sourceforge.net/p/nucnet-projects/wiki/nuclear_mass/" class="url" ><span 
+class="cmtt-10">http://sourceforge.net/p/nucnet-projects/wiki/nuclear_mass/</span></a> to install and compile the
+relevant codes.<span class="footnote-mark"><a 
+href="#fn1x0" id="fn1x0-bk"><sup class="textsuperscript">1</sup></a></span><a 
+ id="x1-4001f1"></a>
+<!--l. 11--><p class="indent" >   Once the <span 
+class="cmti-10">nuclear</span><span 
+class="cmti-10">_mass </span>project is properly installed and compiled, you are
+ready to run the the nucleosynthesis calculations. To do so, change into
+the nucnet-tools-code directory that downloaded automatically when you
+compiled the <span 
+class="cmti-10">nuclear</span><span 
+class="cmti-10">_mass </span>project and compile the single zone network
+code:
+                                                                  
+
+                                                                  
+   <div class="verbatim" id="verbatim-2">
+cd&#x00A0;~/projects/nucnet-tools-code/examples/network
+&#x00A0;<br />
+&#x00A0;<br />make&#x00A0;all_network
+</div>
+<!--l. 20--><p class="nopar" > Next, download the data for the calculation by typing:
+                                                                  
+
+                                                                  
+   <div class="verbatim" id="verbatim-3">
+make&#x00A0;data
+</div>
+<!--l. 24--><p class="nopar" > This creates a directory <span 
+class="cmti-10">../../data</span><span 
+class="cmti-10">_pub</span>. For convenience, create a subdirectory under
+<span 
+class="cmti-10">../../data</span><span 
+class="cmti-10">_pub </span>for your output called <span 
+class="cmti-10">coulomb </span>by typing
+                                                                  
+
+                                                                  
+   <div class="verbatim" id="verbatim-4">
+cd&#x00A0;../../data_pub
+&#x00A0;<br />
+&#x00A0;<br />mkdir&#x00A0;coulomb
+</div>
+<!--l. 32--><p class="nopar" > Now edit the file <span 
+class="cmti-10">zone.xml </span>in <span 
+class="cmti-10">data</span><span 
+class="cmti-10">_pub </span>until it reads
+                                                                  
+
+                                                                  
+   <div class="verbatim" id="verbatim-5">
+&#x00A0;&#x00A0;&#x003C;zone_data&#x003E;
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x003C;zone&#x003E;
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x003C;optional_properties&#x003E;
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x003C;property&#x00A0;name="tend"&#x003E;1.e10&#x003C;/property&#x003E;
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x003C;property&#x00A0;name="tau"&#x003E;0.2&#x003C;/property&#x003E;
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x003C;property&#x00A0;name="munuekT"&#x003E;-inf&#x003C;/property&#x003E;
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x003C;property&#x00A0;name="t9_0"&#x003E;5.&#x003C;/property&#x003E;
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x003C;property&#x00A0;name="steps"&#x003E;5&#x003C;/property&#x003E;
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x003C;property&#x00A0;name="rho_0"&#x003E;1.e7&#x003C;/property&#x003E;
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x003C;/optional_properties&#x003E;
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x003C;mass_fractions&#x003E;
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x003C;nuclide&#x00A0;name="si28"&#x003E;
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x003C;z&#x003E;14&#x003C;/z&#x003E;
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x003C;a&#x003E;28&#x003C;/a&#x003E;
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x003C;x&#x003E;1&#x003C;/x&#x003E;
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x003C;/nuclide&#x003E;
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x003C;/mass_fractions&#x003E;
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x003C;/zone&#x003E;
+&#x00A0;<br />&#x00A0;&#x00A0;&#x003C;/zone_data&#x003E;
+</div>
+<!--l. 56--><p class="nopar" >
+<!--l. 58--><p class="indent" >   Once this is done, you are ready to run the calculation. Return to
+<span 
+class="cmsy-10">~</span><span 
+class="cmti-10">/projects/nucnet-tools-code/examples/network </span>by typing
+                                                                  
+
+                                                                  
+   <div class="verbatim" id="verbatim-6">
+cd&#x00A0;../examples/network
+</div>
+<!--l. 63--><p class="nopar" > and type (all on one line)
+                                                                  
+
+                                                                  
+   <div class="verbatim" id="verbatim-7">
+./run_single_zone&#x00A0;../../data_pub/my_net.xml&#x00A0;../../data_pub/zone.xml&#x00A0;../../data_pub/coulomb/my_output5.xml&#x00A0;"[z&#x00A0;&#x003C;=&#x00A0;35]"
+</div>
+<!--l. 67--><p class="nopar" > This calculation uses the network data in <span 
+class="cmti-10">../../data</span><span 
+class="cmti-10">_pub/my</span><span 
+class="cmti-10">_net.xml</span>
+and the run data in <span 
+class="cmti-10">../../data</span><span 
+class="cmti-10">_pub/zone.xml </span>and places the output in
+<span 
+class="cmti-10">../../data</span><span 
+class="cmti-10">_pub/coulomb/my</span><span 
+class="cmti-10">_output5.xml</span>. The
+                                                                  
+
+                                                                  
+   <div class="verbatim" id="verbatim-8">
+"[z&#x00A0;&#x003C;=&#x00A0;35]"
+</div>
+<!--l. 71--><p class="nopar" > selects a network that only includes species up to <span 
+class="cmmi-10">Z </span>= 35, which is certainly
+adequate for our purposes. (Typical execution time for an x86_64 type processor:
+<span 
+class="cmsy-10">~</span>50 minutes.)
+<!--l. 1--><p class="noindent" >
+   <h3 class="likesectionHead"><a 
+ id="x1-5000"></a>Figure 1</h3>
+<!--l. 2--><p class="noindent" ><a 
+ id="sec:ec_time5"></a>
+<!--l. 8--><p class="noindent" >To make Figure 1, first run the nucleosynthesis <a 
+href="#sec:single_zone">calculation</a>. Next, compile the
+NucNet Tools analysis codes by typing:
+                                                                  
+
+                                                                  
+   <div class="verbatim" id="verbatim-9">
+cd&#x00A0;~/projects/nucnet-tools-code/examples/analysis
+&#x00A0;<br />
+&#x00A0;<br />make&#x00A0;all_analysis
+</div>
+<!--l. 15--><p class="nopar" > Once that is done, return to the nuclear_mass project:
+                                                                  
+
+                                                                  
+   <div class="verbatim" id="verbatim-10">
+cd&#x00A0;~/projects/nuclear_mass
+</div>
+<!--l. 19--><p class="nopar" > and run the code to compute nuclear mass terms during the calculation by typing
+(all on one line):
+                                                                  
+
+                                                                  
+   <div class="verbatim" id="verbatim-11">
+./compute_mass_terms_in_zones&#x00A0;../nucnet-tools-code/data_pub/coulomb/my_output5.xml&#x00A0;../nucnet-tools-code/data_pub/coulomb/output_terms5.xml
+</div>
+<!--l. 24--><p class="nopar" > Now extract the <span 
+class="cmmi-10">E</span><sub><span 
+class="cmmi-7">C</span></sub> per nucleon versus time by typing (all on one line):
+                                                                  
+
+                                                                  
+   <div class="verbatim" id="verbatim-12">
+../nucnet-tools-code/examples/analysis/print_properties&#x00A0;../nucnet-tools-code/data_pub/coulomb/output_terms5.xml&#x00A0;time&#x00A0;"Coulomb&#x00A0;term"&#x00A0;&#x003E;&#x00A0;../nucnet-tools-code/data_pub/coulomb/ec_time5.txt
+</div>
+<!--l. 28--><p class="nopar" > Graph column 3 versus column 2 in <span 
+class="cmti-10">ec</span><span 
+class="cmti-10">_time5.txt</span>.
+<!--l. 1--><p class="noindent" >
+   <h3 class="likesectionHead"><a 
+ id="x1-6000"></a>Figure 2</h3>
+<!--l. 2--><p class="noindent" ><a 
+ id="sec:yz_rad_stable"></a>
+<!--l. 8--><p class="noindent" >To make Figure 2, it is first necessary to compute the radioactive fraction of each
+isobaric abundance. To do this, checkout and compile the <span 
+class="cmti-10">nuclear</span><span 
+class="cmti-10">_decay </span>project, as
+described at <a 
+href="http://sourceforge.net/p/nucnet-projects/wiki/nuclear_decay/" class="url" ><span 
+class="cmtt-10">http://sourceforge.net/p/nucnet-projects/wiki/nuclear_decay/</span></a>.
+Once that is done, compute the isobaric abundances. To do so, select the
+timestep between time <span 
+class="cmmi-10">t </span>= 0<span 
+class="cmmi-10">.</span>19 and <span 
+class="cmmi-10">t </span>= 0<span 
+class="cmmi-10">.</span>2 seconds; thus, type (all one one
+line)
+                                                                  
+
+                                                                  
+   <div class="verbatim" id="verbatim-13">
+./rad_vs_nucleon_number&#x00A0;../nucnet-tools-code/data_pub/coulomb/my_output5.xml&#x00A0;a&#x00A0;"[optional_properties/property[@name='time']&#x00A0;&#x003E;&#x00A0;0.19&#x00A0;and&#x00A0;optional_properties/property[@name&#x00A0;=&#x00A0;'time']&#x00A0;&#x003C;&#x00A0;0.2]"&#x00A0;&#x003E;&#x00A0;../nucnet-tools-code/data_pub/coulomb/yz_rad_stable.txt
+</div>
+<!--l. 18--><p class="nopar" > The output file <span 
+class="cmti-10">yz</span><span 
+class="cmti-10">_rad</span><span 
+class="cmti-10">_stable.txt </span>gives the isobaric abundances for the indicated
+number of mass numbers (first line) and at the indicated time, temperature, density
+(second line). The subsequent lines give the mass number <span 
+class="cmmi-10">A</span>, the isobaric abundance,
+and the fraction of the abundance that is radioactive. Graph column 2 versus column
+1. Distinguish between the cases where the radioactive abundance fraction is less
+than or greater than 1/2.
+<!--l. 1--><p class="noindent" >
+   <h3 class="likesectionHead"><a 
+ id="x1-7000"></a>Figure 3</h3>
+<!--l. 2--><p class="noindent" ><a 
+ id="sec:x"></a>
+<!--l. 8--><p class="noindent" >To make Figure 3, change into the <span 
+class="cmti-10">data</span><span 
+class="cmti-10">_pub/coulomb </span>directory and extract the
+necessary data by typing
+                                                                  
+
+                                                                  
+   <div class="verbatim" id="verbatim-14">
+cd&#x00A0;~/projects/nucnet-tools-code/data_pub/coulomb
+&#x00A0;<br />
+&#x00A0;<br />../../examples/analysis/print_properties&#x00A0;my_output5.xml&#x00A0;time&#x00A0;&#x003E;&#x00A0;time.txt
+&#x00A0;<br />
+&#x00A0;<br />../../examples/analysis/print_mass_fractions_in_zones&#x00A0;my_output5.xml&#x00A0;he4&#x00A0;si28&#x00A0;ca40&#x00A0;fe54&#x00A0;ni56&#x00A0;&#x003E;&#x00A0;x.txt
+</div>
+<!--l. 17--><p class="nopar" > Graph columns 2 (<sup><span 
+class="cmr-7">4</span></sup>He), 3 (<sup><span 
+class="cmr-7">28</span></sup>Si), 4 (<sup><span 
+class="cmr-7">40</span></sup>Ca), 5 (<sup><span 
+class="cmr-7">54</span></sup>Fe), and 6 (<sup><span 
+class="cmr-7">56</span></sup>Ni) of <span 
+class="cmti-10">x.txt </span>versus
+column 2 of <span 
+class="cmti-10">time.txt</span>.
+<!--l. 1--><p class="noindent" >
+   <h3 class="likesectionHead"><a 
+ id="x1-8000"></a>Figure 4</h3>
+<!--l. 2--><p class="noindent" ><a 
+ id="sec:ec_time_multi"></a>
+<!--l. 8--><p class="noindent" >To make Figure 4, run the nucleosynthesis calculations as done <a 
+href="#sec:single_zone">previously</a> but for the
+four cases 1) <span 
+class="cmti-10">t9</span><span 
+class="cmti-10">_0 </span>= 6 and rho_0 = 2.e7, 2) <span 
+class="cmti-10">t9</span><span 
+class="cmti-10">_0 </span>= 7 and rho_0 = 3.4e7, 3) <span 
+class="cmti-10">t9</span><span 
+class="cmti-10">_0 </span>= 8
+and rho_0 = 5.e7, and 4) <span 
+class="cmti-10">t9</span><span 
+class="cmti-10">_0 </span>= 7 and rho_0 = 1.e7 (Run 2). Then create the data
+as done <a 
+href="#sec:ec_time5">previously</a>.
+<!--l. 1--><p class="noindent" >
+   <h3 class="likesectionHead"><a 
+ id="x1-9000"></a>Figure 5</h3>
+<!--l. 2--><p class="noindent" ><a 
+ id="sec:stellar"></a>
+<!--l. 8--><p class="noindent" >Figure 5 can be made from data computed with the simple_snII project at
+<a 
+href="http://sourceforge.net/p/nucnet-projects/wiki/simple_snII/" class="url" ><span 
+class="cmtt-10">http://sourceforge.net/p/nucnet-projects/wiki/simple_snII/</span></a>. To make this figure, follow
+the instructions at <a 
+href="http://nucnet-projects.sourceforge.net/data_pub/2014-02-26/" class="url" ><span 
+class="cmtt-10">http://nucnet-projects.sourceforge.net/data_pub/2014-02-26/</span></a> to
+make Figure 6 of <a 
+href="http://journals.aps.org/prc/abstract/10.1103/PhysRevC.89.025807" class="url" ><span 
+class="cmtt-10">http://journals.aps.org/prc/abstract/10.1103/PhysRevC.89.025807</span></a>,
+choosing the appropriate isotopes and stellar interior mass range.
+<!--l. 1--><p class="noindent" >
+   <h3 class="likesectionHead"><a 
+ id="x1-10000"></a>Figure 6</h3>
+<!--l. 2--><p class="noindent" ><a 
+ id="sec:mass_diff"></a>
+<!--l. 8--><p class="noindent" >To make Figure 6, it is necessary to retrieve the relevant nuclear data. First, create
+the <span 
+class="cmti-10">libnucnet </span>example codes by typing
+                                                                  
+
+                                                                  
+   <div class="verbatim" id="verbatim-15">
+cd&#x00A0;~/projects/nucnet-tools-code/build
+&#x00A0;<br />
+&#x00A0;<br />make&#x00A0;-f&#x00A0;Makefile.libnucnet&#x00A0;all_libnucnet
+</div>
+<!--l. 15--><p class="nopar" > Next extract the data by typing
+                                                                  
+
+                                                                  
+   <div class="verbatim" id="verbatim-16">
+cd&#x00A0;../libnucnet
+&#x00A0;<br />
+&#x00A0;<br />./print_nuclides&#x00A0;../data_pub/my_net.xml&#x00A0;"[(z&#x00A0;&#x003E;=&#x00A0;12&#x00A0;and&#x00A0;z&#x00A0;&#x003C;=&#x00A0;30)&#x00A0;and&#x00A0;((a&#x00A0;=&#x00A0;2&#x00A0;*&#x00A0;z&#x00A0;or&#x00A0;a&#x00A0;=&#x00A0;2&#x00A0;*&#x00A0;z&#x00A0;+&#x00A0;4)&#x00A0;and&#x00A0;z&#x00A0;mod&#x00A0;2&#x00A0;=&#x00A0;0)]"&#x00A0;&#x003E;&#x00A0;../data_pub/coulomb/masses.txt
+</div>
+<!--l. 21--><p class="nopar" > The XPath expression selects out only alpha nuclei and their potential
+daughters. Graph the mass excess (column 4 of <span 
+class="cmti-10">masses.txt</span>) difference between
+(<span 
+class="cmmi-10">Z,A</span>) and (<span 
+class="cmmi-10">Z </span><span 
+class="cmsy-10">- </span>2<span 
+class="cmmi-10">,A</span>) versus atomic number of the (<span 
+class="cmmi-10">Z,A</span>) parent (column
+2).
+<!--l. 27--><p class="indent" >   Now compute the terms in the nuclear mass formula for the species by
+typing
+                                                                  
+
+                                                                  
+   <div class="verbatim" id="verbatim-17">
+cd&#x00A0;~/projects/nuclear_mass
+&#x00A0;<br />
+&#x00A0;<br />./mass_terms&#x00A0;../nucnet-tools-code/data_pub/my_net.xml&#x00A0;"[((z&#x00A0;&#x003E;=&#x00A0;12&#x00A0;and&#x00A0;z&#x00A0;&#x003C;=&#x00A0;30)&#x00A0;and&#x00A0;((a&#x00A0;=&#x00A0;2&#x00A0;*&#x00A0;z&#x00A0;or&#x00A0;a&#x00A0;=&#x00A0;2&#x00A0;*&#x00A0;z&#x00A0;+&#x00A0;4)&#x00A0;and&#x00A0;z&#x00A0;mod&#x00A0;2&#x00A0;=&#x00A0;0))&#x00A0;or&#x00A0;a&#x00A0;=&#x00A0;1]"&#x00A0;&#x003E;&#x00A0;../nucnet-tools-code/data_pub/coulomb/energies.txt
+</div>
+<!--l. 32--><p class="nopar" > The columns of the output file <span 
+class="cmti-10">energies.txt </span>are 1 (species name), 2 (atomic number),
+3 (mass number), 4 (volume energy), 5 (surface energy), 6 (Coulomb energy), 7
+(pairing energy), and 8 (shell energy). Subtract the relevant Coulomb energy from
+the mass excess from <span 
+class="cmti-10">masses.txt </span>and plot the difference between (<span 
+class="cmmi-10">Z,A</span>) and (<span 
+class="cmmi-10">Z </span><span 
+class="cmsy-10">- </span>2<span 
+class="cmmi-10">,A</span>)
+versus atomic number of the (<span 
+class="cmmi-10">Z,A</span>) parent.
+<!--l. 40--><p class="indent" >   For more details on running <span 
+class="cmti-10">libnucnet </span>example codes, see the blog post
+<a 
+href="http://sourceforge.net/u/mbradle/blog/2012/07/running-libnucnet-examples/" class="url" ><span 
+class="cmtt-10">http://sourceforge.net/u/mbradle/blog/2012/07/running-libnucnet-examples/</span></a>.
+<!--l. 1--><p class="noindent" >
+   <h3 class="likesectionHead"><a 
+ id="x1-11000"></a>Figure 7</h3>
+<!--l. 2--><p class="noindent" ><a 
+ id="sec:strong"></a>
+<!--l. 8--><p class="noindent" >To make Figure 7, return to the data directory and run the property printer code on
+the output you previously <a 
+href="#sec:ec_time5">created</a> by typing:
+                                                                  
+
+                                                                  
+   <div class="verbatim" id="verbatim-18">
+cd&#x00A0;~/projects/nucnet-tools-code/data_pub/coulomb
+&#x00A0;<br />
+&#x00A0;<br />../../examples/analysis/print_properties&#x00A0;output_terms5.xml&#x00A0;time&#x00A0;"Volume&#x00A0;term"&#x00A0;"Surface&#x00A0;term"&#x00A0;"Pairing&#x00A0;term"&#x00A0;"Shell&#x00A0;term"&#x00A0;&#x003E;&#x00A0;terms.txt
+</div>
+<!--l. 15--><p class="nopar" > Plot the sum of columns 3, 4, 5, and 6 versus column 2 in terms.txt.
+<!--l. 1--><p class="noindent" >
+   <h3 class="likesectionHead"><a 
+ id="x1-12000"></a>Table 1</h3>
+<!--l. 2--><p class="noindent" ><a 
+ id="sec:table"></a>
+<!--l. 8--><p class="noindent" >To make Table 1, change into the <span 
+class="cmti-10">data</span><span 
+class="cmti-10">_pub/coulomb </span>directory and extract the
+necessary data for the first row by typing
+                                                                  
+
+                                                                  
+   <div class="verbatim" id="verbatim-19">
+cd&#x00A0;~/projects/nucnet-tools-code/data_pub/coulomb
+&#x00A0;<br />
+&#x00A0;<br />../../examples/analysis/print_properties&#x00A0;my_output5.xml&#x00A0;time&#x00A0;t9&#x00A0;rho&#x00A0;&#x003E;&#x00A0;props.txt
+&#x00A0;<br />
+&#x00A0;<br />../../examples/analysis/print_mass_fractions_in_zones&#x00A0;my_output5.xml&#x00A0;he4&#x00A0;ni56&#x00A0;&#x003E;&#x00A0;x.txt
+</div>
+<!--l. 17--><p class="nopar" > Find the row in <span 
+class="cmti-10">props.txt </span>corresponding to the time <span 
+class="cmsy-10">~ </span>100 seconds. Compute the
+photon-to-nucleo ratio <span 
+class="cmmi-10">&#x03D5; </span>as <span 
+class="cmmi-10">&#x03D5; </span>= 0<span 
+class="cmmi-10">.</span>34<span 
+class="cmmi-10">T</span><sub><span 
+class="cmr-7">9</span></sub><sup><span 
+class="cmr-7">3</span></sup><span 
+class="cmmi-10">&#x2215;&#x03C1;</span><sub><span 
+class="cmr-7">5</span></sub>, where <span 
+class="cmmi-10">&#x03C1;</span><sub><span 
+class="cmr-7">5</span></sub> = <span 
+class="cmmi-10">&#x03C1;&#x2215;</span>10<sup><span 
+class="cmr-7">5</span></sup> g/cc. The <sup><span 
+class="cmr-7">4</span></sup>He and
+<sup><span 
+class="cmr-7">56</span></sup>Ni mass fractions are in the corresponding row of the file <span 
+class="cmti-10">x.txt</span>. The Coulomb
+energy per nucleon can be retrieved from the file <span 
+class="cmti-10">ec</span><span 
+class="cmti-10">_time5.txt </span>computed <a 
+href="#sec:ec_time5">previously</a>.
+Repeat for the other calculations.
+<!--l. 32--><p class="indent" >   &#x00A0;______________________________________________________________ <div class="footnotes"><!--l. 9--><p class="indent" > <span class="footnote-mark"><a 
+href="#fn1x0-bk" id="fn1x0"><sup class="textsuperscript">1</sup></a></span>
+<span 
+class="cmr-8">Throughout these instructions, we will assume you have installed the </span><span 
+class="cmti-8">projects/ </span><span 
+class="cmr-8">directory off</span>
+<span 
+class="cmr-8">your home directory.</span>                                                                                               </div>
+ 
+</body></html> 
+
+                                                                  
+
+

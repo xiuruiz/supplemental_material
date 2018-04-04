@@ -1,0 +1,22 @@
+\section*{Figure \arabic{counter}}
+\hypertarget{sec:x}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Output file: x.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent To make Figure \arabic{counter},
+change into the {\em data\_pub/coulomb} directory and extract the
+necessary data by typing
+\begin{verbatim}
+cd ~/projects/nucnet-tools-code/data_pub/coulomb
+
+../../examples/analysis/print_properties my_output5.xml time > time.txt
+
+../../examples/analysis/print_mass_fractions_in_zones my_output5.xml he4 si28 ca40 fe54 ni56 > x.txt
+\end{verbatim}
+Graph columns 2 ($^4$He), 3 ($^{28}$Si), 4 ($^{40}$Ca), 5 ($^{54}$Fe), and
+6 ($^{56}$Ni) of {\em x.txt} versus column 2 of {\em time.txt}.
+
+\addtocounter{counter}{1}
+

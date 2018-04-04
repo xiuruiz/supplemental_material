@@ -1,0 +1,32 @@
+\section*{Figure \arabic{counter}}
+\hypertarget{sec:ec_time5}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Output file: ec_time5.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent To make Figure \arabic{counter},
+first run the nucleosynthesis \hyperlink{sec:single_zone}{calculation}.
+Next, compile the NucNet Tools analysis codes by typing:
+\begin{verbatim}
+cd ~/projects/nucnet-tools-code/examples/analysis
+
+make all_analysis
+\end{verbatim}
+Once that is done, return to the nuclear\_mass project:
+\begin{verbatim}
+cd ~/projects/nuclear_mass
+\end{verbatim}
+and run the code to compute nuclear mass terms during the calculation by
+typing (all on one line):
+\begin{verbatim}
+./compute_mass_terms_in_zones ../nucnet-tools-code/data_pub/coulomb/my_output5.xml ../nucnet-tools-code/data_pub/coulomb/output_terms5.xml
+\end{verbatim}
+Now extract the $E_C$ per nucleon versus time by typing (all on one line):
+\begin{verbatim}
+../nucnet-tools-code/examples/analysis/print_properties ../nucnet-tools-code/data_pub/coulomb/output_terms5.xml time "Coulomb term" > ../nucnet-tools-code/data_pub/coulomb/ec_time5.txt
+\end{verbatim}
+Graph column 3 versus column 2 in {\em ec\_time5.txt}.
+
+\addtocounter{counter}{1}
+
